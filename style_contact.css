@@ -1,0 +1,123 @@
+/* Reset des marges et des paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    width: 100vw; /* Utiliser toute la largeur de la fenêtre */
+    height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+    overflow-x: hidden; /* Supprimer le défilement horizontal */
+    background: #c4d6b5; /* Fond vert pâle */
+    font-family: 'Poppins', sans-serif; /* Police Poppins */
+}
+
+/* Style pour le header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    padding: 20px 10px;
+    background: #c4d6b5; /* Vert pâle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Section Contact */
+.contact {
+    margin-top: 120px; /* Espacement en haut pour ne pas être masqué par le header */
+    padding: 40px 10%;
+    background: #c4d6b5; /* Vert pâle */
+    color: #343a3f; /* Noir doux pour le texte */
+    text-align: center;
+}
+
+/* Titre de la section Contact */
+.contact h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #343a3f;
+    margin-bottom: 40px;
+}
+
+/* Section des informations de contact */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 24px;
+    color: #343a3f;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+/* Liens */
+.contact-item a {
+    text-decoration: none;
+    color: #8b6b4f;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: #343a3f;
+}
+
+/* Navbar alignée à droite */
+.navbar {
+    position: fixed; /* Garder la navbar fixe en haut de la page */
+    top: 20px;
+    right: 45px; /* Déplacer la navbar vers la droite */
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px; /* Espacement entre les liens */
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 100;
+}
+
+.navbar a {
+    color: #343a3f; /* Noir doux */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffffff; /* Marron foncé au survol et pour le lien actif */
+}
+
+/* Logo aligné à gauche */
+.logo {
+    position: fixed; /* Garder le logo fixé en haut */
+    top: 20px; /* Décalage vers le bas pour être plus visible */
+    left: 45px; /* Alignement à gauche avec un léger décalage */
+    font-size: 25px;
+    color: #343a3f; /* Noir doux */
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 100;
+}
+
