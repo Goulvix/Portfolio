@@ -51,7 +51,7 @@ body {
 
 .navbar a {
     font-size: 18px;
-    color: #fdfdfd; /* Noir doux */
+    color: #fdfdfd; 
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -71,7 +71,7 @@ body {
 }
 .navbar a:hover,
 .navbar a.active {
-    color: #fdfdfd; /* Marron foncé */
+    color: #jjjjv; /* Marron foncé */
 }
 
 .home {
