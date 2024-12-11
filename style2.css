@@ -71,7 +71,7 @@ body {
 }
 .navbar a:hover,
 .navbar a.active {
-    color: #jjjjv; /* Marron foncé */
+    color: #fdfdfd; /* Marron foncé */
 }
 
 .home {
