@@ -93,6 +93,7 @@ body {
 .cv-image {
     display: block;
     max-width: 70%; /* L'image occupe au maximum 90% de la largeur disponible */
+    width: 70%;
     height: auto; /* Conserve les proportions de l'image */
     border: 1px solid #6c757d;
     border-radius: 12px;
