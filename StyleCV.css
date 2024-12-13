@@ -92,7 +92,7 @@ body {
 /* Image du CV */
 .cv-image {
     display: block;
-    max-width: 90%; /* L'image occupe au maximum 90% de la largeur disponible */
+    max-width: 70%; /* L'image occupe au maximum 90% de la largeur disponible */
     height: auto; /* Conserve les proportions de l'image */
     border: 1px solid #6c757d;
     border-radius: 12px;
@@ -144,7 +144,7 @@ body {
     }
 
     .cv-image {
-        max-width: 80%;
+        max-width: 60%;
     }
 
     .download-btn {
@@ -182,7 +182,7 @@ body {
     }
 
     .cv-image {
-        max-width: 95%;
+        max-width: 75%;
     }
 
     .download-btn {
@@ -220,7 +220,7 @@ body {
     }
 
     .cv-image {
-        max-width: 100%;
+        max-width: 70%;
     }
 
     .download-btn {
