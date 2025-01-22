@@ -140,6 +140,58 @@ body.no-scroll {
     color: #ffffff; /* Marron foncé au survol et pour le lien actif */
 }
 
+/* Conteneur du carrousel */
+.carousel {
+    position: relative;
+    width: 100%; /* Occuper toute la largeur disponible */
+    height: auto; /* Définir une hauteur suffisante pour les images */
+    overflow: hidden; /* Masquer les parties qui dépassent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Fond de la section du carrousel, à modifier selon ton design */
+}
+
+/* Images dans le carrousel */
+.carousel-image {
+    width: 100%; /* Assurer que les images prennent toute la largeur du conteneur */
+    height: 100%; /* Assurer que les images prennent toute la hauteur du conteneur */
+    object-fit: cover; /* Cela évite que les images soient coupées et les ajuste correctement sans déformation */
+    display: none; /* Masquer les images par défaut */
+}
+
+/* Affichage de l'image active */
+.carousel-image.active {
+    display: block; /* Afficher l'image active */
+}
+
+
+/* Les flèches de navigation */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre pour les flèches */
+    color: #fff; /* Couleur des flèches */
+    padding: 10px;
+    border-radius: 50%; /* Forme ronde */
+    font-size: 30px; /* Taille des flèches */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-arrow.left {
+    left: 10px; /* Flèche gauche à gauche */
+}
+
+.carousel-arrow.right {
+    right: 10px; /* Flèche droite à droite */
+}
+
+
+
+
 /* Logo aligné à gauche */
 .logo {
     position: fixed; /* Garder le logo fixé en haut */
