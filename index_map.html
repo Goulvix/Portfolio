@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./style_map.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive avec Mapbox</title>
+
+    <!-- Importation de Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+  
+</head>
+<body>
+
+    <!-- Conteneur de la carte -->
+    <div id="map"></div>
+
+    <!-- Sélecteur de style de carte -->
+    <div id="menu">
+        <label for="style-selector">Choisir un fond de carte :</label>
+        <select id="style-selector">
+            <option value="mapbox://styles/goulvix35/cm736h2zf01q701s2buzxcu6h">Carte perso</option>
+            <option value="mapbox://styles/mapbox/dark-v11">DARK MAPBOX</option>
+            <option value="mapbox://styles/mapbox/satellite-streets-v12">Vue satellite</option>
+        </select>
+    </div>
+
+      <!-- Gestionnaire des couches (à droite) sous forme de menu déroulant avec cases à cocher -->
+    <div id="layer-menu">
+        <label for="layer-toggle">Gérer les couches :</label>
+        <div id="layer-toggle">
+            <label>
+                <input type="checkbox" id="toggle-buildings" checked>
+                Bâtiments 3D
+            </label>
+            <label>
+                  <input type="checkbox" id="toggle-metro" checked>
+                  Métros
+              </label>
+                           
+       
+        </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script_map.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script_map.js"></script>
+
+
+  
+</body>
+</html>
