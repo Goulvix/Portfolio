@@ -17,6 +17,11 @@ let activeLayers = {
     Metro: true
 };
 
+function goToHome() {
+    window.location.href = "Portf2.html"; // Remplace par l'URL de ton accueil si différent
+}
+
+
 // Fonction pour ajouter les couches dynamiques
 function addLayers() {
     // Vérifier si la couche existe déjà avant d'ajouter
@@ -86,7 +91,7 @@ function addLayers() {
                             'b', '#3d734f', // Vert pour la ligne B
                             '#000000' // Noir par défaut si autre valeur
                         ],
-                        'line-width': 5
+                        'line-width': 3
                     }
                 });
             })
