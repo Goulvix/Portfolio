@@ -91,7 +91,7 @@ function addLayers() {
                             'b', '#3d734f', // Vert pour la ligne B
                             '#000000' // Noir par défaut si autre valeur
                         ],
-                        'line-width': 3
+                        'line-width': 5
                     }
                 });
             })
