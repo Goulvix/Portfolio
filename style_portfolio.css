@@ -139,7 +139,7 @@ body.no-scroll {
 }
 
 .navbar a {
-    font-size: 24px;
+    font-size: 20px;
     color: #343a3f; /* Noir doux */
     text-decoration: none;
     transition: color 0.3s ease;
