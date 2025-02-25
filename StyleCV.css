@@ -1,4 +1,14 @@
-/* Reset des marges et paddings */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Reset des marges et des paddings */
 * {
     margin: 0;
     padding: 0;
@@ -19,33 +29,36 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 80px;
     width: 100%;
     padding: 20px 10px;
-    background: #c4d6b5;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
 
 /* Navbar alignée à droite */
 .navbar {
-    position: fixed;
+    position: relative;
     top: 20px;
-    right: 45px;
+    left: 45px;
     display: flex;
     justify-content: flex-end;
     gap: 35px;
     font-size: 24px;
     font-weight: 500;
     z-index: 100;
+    margin-top: 10px;
 }
 
 .navbar a {
-    color: #343a3f;
+    font-size: 18px;
+    color: #343a3f; /* Noir doux */
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
 }
 
 .navbar a:hover,
@@ -91,10 +104,9 @@ body {
 
 /* Image du CV */
 .cv-image {
-    display: block;
-    max-width: 70%; /* L'image occupe au maximum 90% de la largeur disponible */
-    width: 70%;
-    height: auto; /* Conserve les proportions de l'image */
+    width: 300px !important;  /* Largeur fixe plus petite */
+    height: auto !important; /* Garde les proportions */
+    max-width: 100%; /* Évite qu'elle dépasse son conteneur */
     border: 1px solid #6c757d;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -146,6 +158,7 @@ body {
 
     .cv-image {
         max-width: 60%;
+        max-height: 500px; /* Optionnel : Limite la hauteur si nécessaire */ /* Réduire encore plus sur les écrans plus petits */
     }
 
     .download-btn {
@@ -183,7 +196,7 @@ body {
     }
 
     .cv-image {
-        max-width: 75%;
+        max-width: 40%; /* Ajuster la taille pour des écrans plus petits */
     }
 
     .download-btn {
@@ -221,7 +234,7 @@ body {
     }
 
     .cv-image {
-        max-width: 70%;
+        max-width: 90%; /* Garder l'image large sur les plus petits écrans */
     }
 
     .download-btn {

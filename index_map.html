@@ -1,80 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="./style_map.css">
-
-</head>
-<body>
-
-    
-
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte Interactive avec Mapbox</title>
+    
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Importation de Mapbox GL JS -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
-  
-
-
     
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style_map.css">
 </head>
 <body>
 
-    <!-- Conteneur de la carte -->
-    <div id="map"></div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="Portf2.html" class="active"><strong>Accueil</strong></a>
+            <a href="CV.html">À propos</a>
+            <a href="pageportfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="index_map.html">Webmapping</a>
+            <a href="index_leaflet.html">Bus en temps réel</a>
+        </nav>
+    </header>
 
-    <!-- Sélecteur de style de carte -->
-    <div id="menu">
-        <label for="style-selector">Choisir un fond de carte :</label>
-        <select id="style-selector">
-            <option value="mapbox://styles/goulvix35/cm736h2zf01q701s2buzxcu6h">Carte perso</option>
-            <option value="mapbox://styles/mapbox/dark-v11">DARK MAPBOX</option>
-            <option value="mapbox://styles/mapbox/satellite-streets-v12">Vue satellite</option>
-        </select>
-    </div>
-
-      <!-- Gestionnaire des couches (à droite) sous forme de menu déroulant avec cases à cocher -->
-    <div id="layer-menu">
-        <label for="layer-toggle">Gérer les couches :</label>
-        <div id="layer-toggle">
-            <label>
-                <input type="checkbox" id="toggle-buildings" checked>
-                Bâtiments 3D
-            </label>
-            <label>
-                  <input type="checkbox" id="toggle-metro" checked>
-                  Métros
-              </label>
-                           
-       
+    <div class="container">
+        <div id="map"></div>
+        
+        
+                
+    
+        <!-- Sélecteur de style de carte -->
+        <div id="menu">
+            <label for="style-selector">Choisir un fond de carte :</label>
+            <select id="style-selector">
+                <option value="mapbox://styles/mapbox/dark-v11">DARK MAPBOX</option>
+                <option value="mapbox://styles/goulvix35/cm736h2zf01q701s2buzxcu6h">Carte perso</option>
+                <option value="mapbox://styles/mapbox/satellite-streets-v12">Vue satellite</option>
+            </select>
         </div>
-    </div>
+    
+        <!-- Gestionnaire des couches -->
+        <div id="layer-menu">
+            <label for="layer-toggle">Gérer les couches :</label>
+            <div id="layer-toggle">
+                <label>
+                    <input type="checkbox" id="toggle-buildings" checked>
+                    Bâtiments 3D
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-metro" checked>
+                    Métros
+                </label>
+            </div>
+        </div>
+    
+        
 
     <!-- Lien vers le fichier JavaScript -->
     <script src="script_map.js"></script>
-
-
-<!-- Bouton de retour à l'accueil -->
-<div id="home-button">
-    <button onclick="goToHome()"><strong>Accueil</strong></button>
-</div>
-
-
-
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script_map.js"></script>
-
-
-  
 </body>
 </html>

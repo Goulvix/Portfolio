@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
 /* Reset des marges et des paddings par défaut */
 * {
     margin: 0;
@@ -89,7 +101,7 @@ body {
 .navbar {
     position: fixed; /* Garder la navbar fixe en haut de la page */
     top: 20px;
-    right: 45px; /* Déplacer la navbar vers la droite */
+    left: 35px; /* Déplacer la navbar vers la droite */
     display: flex;
     justify-content: flex-end;
     gap: 35px; /* Espacement entre les liens */

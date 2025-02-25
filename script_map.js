@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ291bHZpeDM1IiwiYSI6ImNtNzM2NXJybTBqMTgyanF6c
 // Configuration de la carte
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/goulvix35/cm736h2zf01q701s2buzxcu6h',
+    style: 'mapbox://styles/mapbox/dark-v11',
     zoom: 13,
     center: [-1.67, 48.11],
     pitch: 60,

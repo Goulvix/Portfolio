@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Reset les marges et les paddings par défaut */
 * {
     margin: 0;
@@ -117,9 +126,9 @@ body.no-scroll {
 /* Navbar alignée à droite */
 .navbar {
     position: fixed; /* Garder la navbar fixe en haut de la page */
-    top: 20px;
+    top: 10px;
     color: #343a3f;
-    right: 45px; /* Déplacer la navbar vers la droite */
+    left : 35px; /* Déplacer la navbar vers la droite */
     display: flex;
     justify-content: flex-end;
     gap: 35px; /* Espacement entre les liens */
@@ -130,6 +139,7 @@ body.no-scroll {
 }
 
 .navbar a {
+    font-size: 24px;
     color: #343a3f; /* Noir doux */
     text-decoration: none;
     transition: color 0.3s ease;

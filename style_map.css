@@ -1,33 +1,71 @@
-#map {position:absolute; top:0; bottom:0; width:100%;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
- #menu {
-            position: absolute;
-            top: 10px;
-            left: 70px;
-            background: white;
-            padding: 10px;
-            z-index: 1000;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
 
-#layer-menu {
-    position: absolute;
-    top: 10px;
-    right: 70px;
-    background: white;
-    padding: 10px;
-    z-index: 1000;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #c4d6b5; /* Vert pâle */
+    color: #343a3f; /* Noir doux */
+    overflow-x: hidden;
 }
 
 
-#home-button {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #343a3f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #fdfdfd;
+}
+
+.container {
+    flex: 1;
+    border: 4px solid grey;
+    border-radius: 15px;
+    margin-left: 350px;
+    margin-right: 50px;
+    min-width: 300px; 
+    margin-bottom: 10px;
+    margin-top: 85px;
+    height: 750px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    height: 750px;
+    
+}
+
+#menu, #layer-menu {
     position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     background: white;
     padding: 10px;
     border-radius: 5px;
@@ -35,16 +73,23 @@
     z-index: 1000;
 }
 
-#home-button button {
-    background: #343a3f;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
+#menu {
+    top: 300px;
+    left: 20px;
+    width: 250px; /* Réduit la largeur de l'onglet */
+    padding: 5px; /* Réduit l'espace intérieur */
+    background: white;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
-#home-button button:hover {
-    background: #343a3f;
+
+#layer-menu {
+    top: 400px;
+    left: 20px;
+    width: 250px;
 }
+
+
+
