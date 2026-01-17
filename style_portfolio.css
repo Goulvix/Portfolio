@@ -17,7 +17,7 @@
 /* Corps de la page */
 body {
     width: 100vw; /* Utiliser toute la largeur de la fenêtre */
-    height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+    min-height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
     overflow-x: hidden; /* Supprimer le défilement horizontal */
     background: #c4d6b5; /* Fond vert pâle */
     font-family: 'Poppins', sans-serif; /* Police Poppins */
@@ -65,14 +65,17 @@ body {
 /* Liste des éléments du portfolio */
 .portfolio-items {
     display: flex;
-    flex-direction: column; /* Alignement des élémsents en colonne */
-    justify-content: flex-start; /* Aligner les éléments au début */
-    gap: 40px; /* Espacement entre les éléments */
-    overflow-y: scroll; /* Défilement vertical */
-    padding-bottom: 20px; /* Espacement au bas pour éviter que les éléments soient collés */
-    max-width: 100%; /* Utiliser toute la largeur disponible */
-    height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 100px;
+    padding-bottom: 20px;
+    max-width: 100%;
+    overflow: visible;   /* ✅ pas de scroll interne */
+    height: auto;        /* ✅ laisse le contenu définir la hauteur */
 }
+
+
+
 
 /* Élément individuel du portfolio */
 .portfolio-item {
@@ -85,7 +88,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto; /* Centrer les éléments */
+    margin: 0 auto 10px auto; /* Centrer les éléments */
 }
 
 /* Style pour les images des éléments du portfolio */
@@ -150,30 +153,33 @@ body.no-scroll {
     color: #ffffff; /* Marron foncé au survol et pour le lien actif */
 }
 
-/* Conteneur du carrousel */
+/* Conteneur carrousel */
 .carousel {
     position: relative;
-    width: 100%; /* Occuper toute la largeur disponible */
-    height: auto; /* Définir une hauteur suffisante pour les images */
-    overflow: hidden; /* Masquer les parties qui dépassent */
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Fond de la section du carrousel, à modifier selon ton design */
 }
 
-/* Images dans le carrousel */
+/* Images simples ET images de carrousel = même rendu */
+.portfolio-item img,
 .carousel-image {
-    width: 100%; /* Assurer que les images prennent toute la largeur du conteneur */
-    height: 100%; /* Assurer que les images prennent toute la hauteur du conteneur */
-    object-fit: cover; /* Cela évite que les images soient coupées et les ajuste correctement sans déformation */
-    display: none; /* Masquer les images par défaut */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Affichage de l'image active */
-.carousel-image.active {
-    display: block; /* Afficher l'image active */
+/* Gestion affichage carrousel */
+.carousel-image {
+    display: none;
 }
+
+.carousel-image.active {
+    display: block;
+}
+
 
 
 /* Les flèches de navigation */
@@ -291,3 +297,34 @@ body.no-scroll {
         font-size: 18px;
     }
 }
+
+
+
+
+
+
+.carousel video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; /* ✅ PAS de découpe */
+    background: #000; /* optionnel : bandes noires propres */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Style spécifique pour la vidéo du portfolio */
+.portfolio-item video {
+    width: 100%;
+    height: 500px;          /* ← AUGMENTE LA TAILLE ICI */
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
