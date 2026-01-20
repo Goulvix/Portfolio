@@ -23,7 +23,7 @@
             margin-right: 80px;
             min-width: 300px; 
             margin-bottom: 30px;
-			margin-top: 60px;
+			
         }
 
         #container {
@@ -46,6 +46,32 @@
         .navbar a.active {
             color: #fdfdfd;
         }
+
+        .map-intro {
+    max-width: 900px;
+    margin: 140px auto 30px auto; /* espace sous le header */
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.map-intro h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343a3f;
+    margin-bottom: 10px;
+}
+
+.map-intro p {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+
+        
     </style>
 </head>
 
@@ -56,11 +82,20 @@
             <a href="Portf2.html" class="active"><strong>Accueil</strong></a>
             <a href="CV.html">À propos</a>
             <a href="pageportfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="index_map.html">Webmapping</a>
             <a href="index_leaflet.html">Bus en temps réel</a>
+            <a href="contact.html">Contact</a>
+            
         </nav>
     </header>
+
+   <div class="map-intro">
+    <h3>Bus en temps réel – Réseau STAR (Rennes)</h3>
+    <p>
+        Cette carte interactive affiche la position des bus du réseau STAR en temps réel.
+        Les véhicules sont classés selon leur état (en ligne, hors service, inconnu, haut-le-pied)
+        et sont mis à jour automatiquement toutes les minutes grâce à l'API data.explore de la star.
+    </p>
+    </div>
 
     <div id="container">
         <div id="map"></div>

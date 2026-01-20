@@ -28,15 +28,15 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 80px;
     width: 100%;
     padding: 20px 10px;
-    background: #c4d6b5; /* Vert pâle */
+    background: #6f7f6b;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
+
 
 /* Section Portfolio */
 .portfolio {
@@ -53,13 +53,8 @@ body {
 .portfolio h2 {
     font-size: 40px;
     font-weight: 700;
-    color: #343a3f; /* Noir doux */
-    margin-bottom: 40px;
-    padding: 20px; /* Espacement autour du texte */
-    background-color: #343a3f; /* Fond marron foncé */
-    color: #ffffff; /* Couleur du texte en blanc pour contraster avec le fond */
-    border-radius: 8px; /* Coins arrondis pour un effet plus doux */
-    display: inline-block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
+    color: #343a3f;
+    margin-bottom: 40px; /* S'assure que le fond ne s'étend pas sur toute la largeur */
 }
 
 /* Liste des éléments du portfolio */
@@ -126,32 +121,27 @@ body.no-scroll {
     margin-top: 10px;
 }
 
-/* Navbar alignée à droite */
+/* Navbar */
 .navbar {
-    position: fixed; /* Garder la navbar fixe en haut de la page */
-    top: 10px;
-    color: #343a3f;
-    left : 35px; /* Déplacer la navbar vers la droite */
-    display: flex;
-    justify-content: flex-end;
-    gap: 35px; /* Espacement entre les liens */
-    font-size: 24px;
-    font-weight: 500;
-    z-index: 100;
-    margin-top: 20px;
+    margin-right: 45px;
 }
 
 .navbar a {
-    font-size: 20px;
-    color: #343a3f; /* Noir doux */
+    font-size: 18px;
+    color: #343a3f;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #ffffff; /* Marron foncé au survol et pour le lien actif */
+    color: #ffffff;
 }
+
+
+
 
 /* Conteneur carrousel */
 .carousel {
@@ -209,16 +199,7 @@ body.no-scroll {
 
 
 /* Logo aligné à gauche */
-.logo {
-    position: fixed; /* Garder le logo fixé en haut */
-    top: 20px; /* Décalage vers le bas pour être plus visible */
-    left: 45px; /* Alignement à gauche avec un léger décalage */
-    font-size: 25px;
-    color: #343a3f; /* Noir doux */
-    text-decoration: none;
-    font-weight: 600;
-    z-index: 100;
-}
+
 
 /* Ajouter des requêtes de media pour la réactivité */
 

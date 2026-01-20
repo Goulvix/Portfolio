@@ -31,30 +31,20 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10px;
-    background: transparent;
+    background:  #6f7f6b;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-/* Navbar alignée à droite */
 .navbar {
-    position: relative;
-    top: 20px;
-    left: 45px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 35px;
-    font-size: 24px;
-    font-weight: 500;
-    z-index: 100;
-    margin-top: 10px;
+    margin-right: 45px;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #343a3f; /* Noir doux */
+    color: #343a3f;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -65,6 +55,9 @@ body {
 .navbar a.active {
     color: #ffffff;
 }
+
+
+
 
 /* Logo aligné à gauche */
 .logo {

@@ -31,23 +31,23 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 80px;
     width: 100%;
     padding: 20px 10px;
-    background: #c4d6b5; /* Vert pâle */
+    background: #6f7f6b;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
 
 /* Section Contact */
 .contact {
-    margin-top: 120px; /* Espacement en haut pour ne pas être masqué par le header */
-    padding: 40px 10%;
+    margin-top: 120px; /* Espacement en haut pour éviter que le contenu soit masqué par le header */
+    padding: 40px 10%; /* Padding adapté à votre design */
     background: #c4d6b5; /* Vert pâle */
     color: #343a3f; /* Noir doux pour le texte */
     text-align: center;
+    min-height: 100vh;
 }
 
 /* Titre de la section Contact */
@@ -97,28 +97,23 @@ body {
     color: #343a3f;
 }
 
-/* Navbar alignée à droite */
+/* Navbar */
 .navbar {
-    position: fixed; /* Garder la navbar fixe en haut de la page */
-    top: 20px;
-    left: 35px; /* Déplacer la navbar vers la droite */
-    display: flex;
-    justify-content: flex-end;
-    gap: 35px; /* Espacement entre les liens */
-    font-size: 18px;
-    font-weight: 500;
-    z-index: 100;
+    margin-right: 45px;
 }
 
 .navbar a {
-    color: #343a3f; /* Noir doux */
+    font-size: 18px;
+    color: #343a3f;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #ffffff; /* Marron foncé au survol et pour le lien actif */
+    color: #ffffff;
 }
 
 /* Logo aligné à gauche */
