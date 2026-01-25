@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #c4d6b5; /* Vert pâle */
+    color: #343a3f; /* Noir doux */
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: #6f7f6b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #343a3f; /* Noir doux */
+    text-decoration: none;
+    font-weight: 600;
+    overflow: hidden;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #c4d6b5;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #343a3f; /* Noir doux */
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    
+}
+
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #fdfdfd; /* Marron foncé */
+}
+
+.home {
+    height: 100vh;
+    background: url(FOND2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 120px; /* sous le header */
+}
+
+
+
+.home-content {
+    width: 50%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+
+.home-title h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #343a3f; /* Noir doux */
+    overflow: hidden;
+    text-align: left; 
+    line-height: 1.;
+    
+    margin-left: -20px;
+    padding-left: 0;
+    margin-top: -25px;    
+}
+
+
+
+.home-content h3 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    color: #2f3e3b; /* Marron foncé */
+    overflow: hidden;
+    text-align: left; /* Alignement à gauche */
+    margin-top: -10px;   
+    margin-left: -20px;
+    }
+
+
+.home-intro {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.home-photo {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    /* zone vide : ta tête est déjà dans l'image */
+}
+
+.home-intro p {
+    font-size: 16px;
+    text-align: justify;
+    max-width: 420px;        /* plus large pour mieux remplir l'espace */
+    margin-left: 125px;       /* espace entre la photo et le texte */
+    margin-top : -35px;
+}
+
+.home-extra {
+    max-width: 690px;       /* largeur du paragraphe */
+    margin-left: -10px;      /* décale le paragraphe vers la droite */
+    margin-top: -20px;       /* espace sous la photo */
+}
+
+.home-extra p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+
+
+.home-content .btn-box {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+    margin-top: 0px;
+    margin-left: -20px;
+}
+
+
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: #343a3f; 
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn-box a:hover {
+    background: #ffffff;           /* fond devient blanc (ancienne couleur du texte) */
+    color: #343a3f;                /* texte devient couleur du fond */
+    filter: brightness(1.1);       /* surbrillance légère */
+    transform: translateY(-2px);   /* effet léger de “soulevé” */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* petite ombre */
+}
+
+
+
+
+.home-sci {
+    position: relative;
+    top: 655px;
+    bottom: 20px; /* Positionner en bas à gauche */
+    margin-left: -780px;    
+    width: 170px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px; 
+    
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #343a3f; /* Bleu-vert doux */
+    border-radius: 50%;
+    font-size: 20px;
+    color: #343a3f; /* Bleu-vert doux */
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.home-sci a:hover {
+    background: #ffffff;           /* fond devient blanc (ancienne couleur du texte) */
+    color: #343a3f;                /* texte devient couleur du fond */
+    filter: brightness(1.1);       /* surbrillance légère */
+    transform: translateY(-2px);   /* effet léger de “soulevé” */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* petite ombre */
+}
+
+
+
+
+
+
+/* Animations */
+@keyframes showRight {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+/* Ajouter des requêtes de media pour la réactivité */
+
+@media screen and (max-width: 1200px) {
+    .home {
+        padding: 0 5%;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .btn-box a {
+        width: 130px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .home-sci a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding: 0 20px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+    }
+
+    .home-content .btn-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-box a {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .home-sci {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 12px;
+    }
+
+    .home-sci a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+    }
+
+    .btn-box a {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .home-sci a {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .home-content .btn-box a {
+        font-size: 12px;
+    }
+}
+
+

@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Gurwan Le Meur</title>
+    <link rel="stylesheet" href="Portfolio_style.css">
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="Accueil.html" class="active"><strong>Accueil</strong></a>
+            <a href="CV.html" >À propos</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Webmap.html">Bus en temps réel</a>
+            <a href="contact.html">Contact</a>
+            
+
+        </nav>
+    </header>
+
+    <section class="portfolio">
+        <h2>Mes productions</h2>
+        <div class="portfolio-items">
+
+
+
+             <!-- Première production, vidéo EGIS -->
+<div class="portfolio-item">
+
+    <video class="carousel-video" controls poster="Logo_Egis.png">
+        <source src="stage_egis.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la lecture vidéo.
+    </video>
+
+    <h3>Dashboard biodiversité réalisé durant mon stage de fin d'étude chez EGIS (vidéo présentée lors de ma soutenance)</h3>
+
+    <p>
+        Durant ce stage, j’ai travaillé à partir d’une base de données interne nommée Ecodata. 
+        Celle-ci regroupe plus de 300 000 recensements faunistiques, floristiques ainsi que des sondages pédologiques. 
+        Elle repose sur une base de données PostgreSQL, enrichie par une surcouche SDE d’ESRI. L’outil développé devait 
+        répondre à plusieurs objectifs complémentaires. Il s’agissait tout d’abord d’offrir aux écologues un support simple et 
+        ergonomique leur permettant de visualiser leurs propres données, afin de mieux préparer les missions de terrain. 
+        Grâce à un travail de datavisualisation, les visuels proposés avaient pour objectif d’être utilisés dans la rédaction de rapports.
+        Cet outil constitue également un levier de communication pour le service commercial, en 
+        illustrant la capacité d’Egis à intervenir sur des projets de toutes tailles et sur l’ensemble du territoire. 
+        Plus globalement, il met en valeur l’expertise des écologues à travers une restitution visuelle et dynamique des données.
+        <br> L’ensemble 
+        des étapes et processus nécessaires à la réalisation de ce projet : recueil des besoins, benchmark des solutions, maquettage et 
+        déploiement, s’est étalé sur une durée d’environ 2 mois.
+    </p>
+
+</div>
+
+
+             <!-- Deuxième production, vidéo valhome -->
+<div class="portfolio-item">
+
+    <video class="carousel-video" controls poster="miniature_valhome.jpg">
+        <source src="IQV_VALHOME.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la lecture vidéo.
+    </video>
+
+    <h3>Vidéo démonstrative de l'application web Val'home</h3>
+
+    <p>
+        Lors du second semestre de M2, j’ai choisi de m’engager dans un projet entrepreneurial, 
+        encadré par l’organisme Pépite, en collaboration avec deux collègues étudiants.
+        L’objectif de ce projet était de concevoir une application d’aide à la décision immobilière, 
+        permettant à un usager d’identifier un lieu de vie pour un futur achat immobilier en fonction 
+        de ses propres critères de qualité de vie. Nous avons souhaité rendre cette démarche accessible au 
+        plus grand nombre, en centralisant plusieurs jeux de données au sein d’une interface intuitive.
+        Comme on peut l’observer dans la vidéo de présentation, chaque critère sélectionné par l’utilisateur
+        s’additionne aux autres afin de générer un score global, attribué aux communes ou aux sections cadastrales.
+        Ce système de pondération permet une lecture claire et comparative des territoires, facilitant ainsi la prise de décision.
+        Ce projet s’est déroulé sur une durée de quatre mois et a mobilisé plusieurs étapes clés : étude de marché, 
+        benchmark des solutions existantes, recherche et traitement des données, ainsi que le développement de l’interface.
+    </p>
+
+</div>
+
+
+            <!-- Troisième production, vidéo citiprofile -->
+<div class="portfolio-item">
+
+    <video class="carousel-video" controls poster ="logo_citiprofile.jpg">
+        <source src="demo_citiptofile.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la lecture vidéo.
+    </video>
+
+    <h3>Vidéo démonstrative du Dashboard pour l'entreprise Citi Profile</h3>
+
+    <p>
+        Durant le second semestre de M2, avec deux collègues du master, nous avons eu l’opportunité
+        de collaborer avec l’entreprise Citi Profile, une start-up spécialisée dans l’analyse
+        de données massives de mobilité (flux de personnes et de véhicules).
+        Citi Profile exploite des données démographiques et de déplacement afin de proposer 
+        des outils d’aide à la décision à destination des acteurs des territoires.
+        La commande initiale consistait à développer une version fonctionnelle d’un dashboard 
+        permettant de visualiser plusieurs millions de données de mobilité, collectées à partir 
+        de données GPS issues d’applications mobiles.
+        Ce projet a été réalisé à l’aide de technologies web (HTML, CSS, JavaScript) et de la 
+        librairie Deck.gl afin de gérer les agrégations de points et d’optimiser l’affichage de données massives.
+    </p>
+
+</div>
+
+            <!-- Premier Carrousel -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-1">
+                    
+                    <img src="Carte_elections.jpg" alt="Projet 1 - Aspect 1" class="carousel-image">
+                    <img src="Crime2.jpg" alt="Projet 1 - Aspect 2" class="carousel-image">
+                    <img src="Crime3.jpg" alt="Projet 1 - Aspect 3" class="carousel-image">
+                    <!-- Autres images -->
+                </div>
+                <h3>Panique sécuritaire en terres paisibles...</h3>
+                <p>La carte bivariée permet de croiser deux variables afin de révéler certaines tendances. La dynamique générale indique un nombre plus important de crimes et délits dans les villes que dans les campagnes accompagné d’un faible pourcentage de vote Le Pen. (Réalisée en M2).</p>
+            </div>
+
+            <!-- Premier Carrousel -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-2">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="5.jpg" alt="Projet 2 - Aspect 1" class="carousel-image">
+                    <img src="7.jpg" alt="Projet 2 - Aspect 2" class="carousel-image">
+                    <img src="8.jpg" alt="Projet 2 - Aspect 3" class="carousel-image">
+                    <img src="9.jpg" alt="Projet 2 - Aspect 3" class="carousel-image">
+                    <img src="11.jpg" alt="Projet 2 - Aspect 3" class="carousel-image">
+                    <!-- Autres images -->
+                </div>
+                <h3>Création d'une chaine de traitement automatisée à l'aide d'FME et du Model Builder d'Arcgis</h3>
+                <p>La consigne était de comparer les deux logiciels en concevant une chaîne de traitement automatisée sur le thème du ZAN, en utilisant uniquement les données de la BDTOPO et/ou de l'INSEE. (Réalisée en M2)</p>
+            </div>
+
+            <!-- Deuxième Carrousel -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-3">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="OF1.jpg" alt="Projet 3 - Aspect 1" class="carousel-image">
+                    <img src="OF2.jpg" alt="Projet 3 - Aspect 2" class="carousel-image">
+                    <img src="OF3.jpg" alt="Projet 3 - Aspect 3" class="carousel-image">
+                    <img src="OF4.jpg" alt="Projet 3 - Aspect 4" class="carousel-image">
+                    <!-- Autres images -->
+                </div>
+                <h3> Exemples de planches recettes réalisées pendant l'atelier Ouest France </h3>
+                <p>La promotion SIGAT était mandatée par le Ouest France dans un but d'assitance à maîtrise d'ouvrage ayant pour objectif final d'améliorer les productions cartographiques du journal. (Réalisées en M2 avec l'ensemble de la promotion)</p>
+            </div>
+
+            <!-- Troisième production -->
+            <div class="portfolio-item">
+                <img src="Carte_anamorphose.jpg" alt="Projet 2">
+                <h3>L'effet BFMTV dans le Nord-Est de la France?</h3>
+                <p>Le cartogramme est un moyen original pour mettre en évidence des disparités entre territoires. Ici, l’idée est de déformer la réalité géographique des EPCI en fonction du nombre de crimes et délits commis. (Réalisée en M2).</p>
+            </div>
+
+
+            <!-- Deuxième Carrousel -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-4">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="Angers_IVS_zoom.jpg" alt="Projet 4 - Aspect 1" class="carousel-image">
+                    <img src="Angers_IAF_300m_zoom.jpg" alt="Projet 4  - Aspect 2" class="carousel-image">
+                    <img src="ALEA_CANICULE.jpg" alt="Projet 4  - Aspect 3" class="carousel-image">
+                    <img src="Angers_croisement_300m_zoom.jpg" alt="Projet 4  - Aspect 4" class="carousel-image">
+                    <!-- Autres images -->
+                </div>
+                <h3> Résultats cartographiques des lieux vulnérables à l'aléa canicule à Angers </h3>
+                <p>La promotion SIGAT était mandatée par RésO Villes afin de mettre en place un protocole permettant de mettre en évidence les quartiers vulnérables à l'aléa canicule (notamment les QPVs) dans 4 villes de France. (Réalisées en M1 avec 10 élèves)</p>
+            </div>
+
+
+            
+
+<!-- Troisième production -->
+            <div class="portfolio-item">
+                <img src="Cartes_GTFS.jpg" alt="Projet 3">
+                <h3>Accidents de la route et Chronostar à Rennes</h3>
+                <p>Projet en apparence simple mais se basant sur les données GTFS (General Transit Feed Specification) de Rennes Métropole.(Réalisée en M2).</p>
+            </div>
+
+
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-5">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="cadre.jpg" alt="Projet 4 - Aspect 1" class="carousel-image">
+                    <img src="immigre.jpg" alt="Projet 4  - Aspect 2" class="carousel-image">
+                    <!-- Autres images -->
+                </div>
+                <h3> Ventilation de populations à l'interieur de bâtiments </h3>
+                <p>Cartes illustrant la répartition de certaines populations agrégée aux bâtiments de la ville d'Angers (réalisées en M1)</p>
+            </div>
+
+            <!-- Quatrième production -->
+            <div class="portfolio-item">
+                <img src="Infographie.jpg" alt="Projet 4 ">
+                <h3>Infographie Killian Jornet et l'UTMB</h3>
+                <p>Infographie réalisée en groupe de 3 relatant les exploits de l'athlète Kilian Jornet.(Réalisée en M2).</p>
+            </div>
+
+            <!-- Quatrième production -->
+            <div class="portfolio-item">
+                <img src="Carte_domicile_travail.jpg" alt="Projet 4">
+                <h3>Cartographie des flux domicile/travail des Pays-de-la-Loire</h3>
+                <p>Cartographie réalisée avec l'extension MMQGIS grâce aux données de l'INSEE et de l'IGN. (Réalisée en M1).</p>
+            </div>
+
+            <!-- Cinquième production -->
+            <div class="portfolio-item">
+                <img src="Carte_Loiret.jpg" alt="Projet 4">
+                <h3>Cartographies des élections présidentielles dans le département du Loiret /h3>
+                <p>Cartographies électorales. (Réalisées en M1).</p>
+            </div>
+            
+            <!-- Quatrième Carrousel -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-6">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="Carte_continuite_ecolo.jpg" alt="Projet 4 - Aspect 1" class="carousel-image">
+                    <img src="Lapin2.png" alt="Projet 4 - Aspect 2" class="carousel-image">
+                </div>
+                <h3> L'intérêt des continuités écologiques pour la préservation des lapins en Bretagne </h3>
+                <p>Cette carte, à but indicatrice, met en relation la moyenne communale d’indice de continuité écologique du lapin, extrait des données du Groupe Mammalogique Breton, et le nombre de collisions, par commune, pour la même espèce, recensé par la DIR Ouest. (Réalisée en M1).</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="carrousel.js"></script>
+</body>
+
+<footer>
+    <p>&copy; 2026 Gurwan Le Meur. Tous droits réservés.</p>
+</footer>
+
+</html>

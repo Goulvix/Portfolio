@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* Reset des marges et des paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    width: 100vw; /* Utiliser toute la largeur de la fenêtre */
+    height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+    overflow-x: hidden; /* Supprimer le défilement horizontal */
+    background: #c4d6b5; /* Fond vert pâle */
+    font-family: 'Poppins', sans-serif; /* Police Poppins */
+}
+
+/* Style pour le header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: #6f7f6b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Section Contact */
+.contact {
+    margin-top: 120px; /* Espacement en haut pour éviter que le contenu soit masqué par le header */
+    padding: 40px 10%; /* Padding adapté à votre design */
+    background: #c4d6b5; /* Vert pâle */
+    color: #343a3f; /* Noir doux pour le texte */
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Titre de la section Contact */
+.contact h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #343a3f;
+    margin-bottom: 40px;
+}
+
+/* Section des informations de contact */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 24px;
+    color: #343a3f;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+/* Liens */
+.contact-item a {
+    text-decoration: none;
+    color: #8b6b4f;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: #343a3f;
+}
+
+/* Navbar */
+.navbar {
+    margin-right: 45px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #343a3f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ffffff;
+}
+
+/* Logo aligné à gauche */
+.logo {
+    position: fixed; /* Garder le logo fixé en haut */
+    top: 20px; /* Décalage vers le bas pour être plus visible */
+    left: 45px; /* Alignement à gauche avec un léger décalage */
+    font-size: 25px;
+    color: #343a3f; /* Noir doux */
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 100;
+}
+
+/* Ajouter des media queries pour rendre la page responsive */
+
+/* Pour les écrans larges (tablettes et petits écrans de bureau) */
+@media screen and (max-width: 1200px) {
+    .contact h2 {
+        font-size: 35px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 90%;
+    }
+
+    .navbar {
+        font-size: 16px;
+        gap: 30px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+}
+
+/* Pour les écrans de taille moyenne (tablettes portrait et petits écrans mobiles) */
+@media screen and (max-width: 768px) {
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .contact-info {
+        padding: 20px 10%;
+    }
+
+    .contact-item {
+        width: 95%;
+    }
+
+    .navbar {
+        font-size: 14px;
+        gap: 20px;
+        right: 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+/* Pour les petits écrans (téléphones mobiles) */
+@media screen and (max-width: 480px) {
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .contact-info {
+        padding: 15px 5%;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+    .navbar {
+        font-size: 12px;
+        gap: 15px;
+        right: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}

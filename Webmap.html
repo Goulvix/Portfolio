@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Accueil_style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libraries/leaflet.css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #c4d6b5;
+            color: #343a3f;
+            overflow-x: hidden;
+        }
+
+        #map {
+            flex: 1;
+            border: 4px solid grey;
+            border-radius: 15px;
+            margin-left: 80px;
+            margin-right: 80px;
+            min-width: 300px; 
+            margin-bottom: 30px;
+			
+        }
+
+        #container {
+            display: flex;
+            height: calc(100vh - 60px);
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: #343a3f;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #fdfdfd;
+        }
+
+        .map-intro {
+    max-width: 900px;
+    margin: 140px auto 30px auto; /* espace sous le header */
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.map-intro h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343a3f;
+    margin-bottom: 10px;
+}
+
+.map-intro p {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="Accueil.html" class="active"><strong>Accueil</strong></a>
+            <a href="CV.html">À propos</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Webmap.html">Bus en temps réel</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    </header>
+
+   <div class="map-intro">
+    <h3>Bus en temps réel – Réseau STAR (Rennes)</h3>
+    <p>
+        Cette carte interactive affiche la position des bus du réseau STAR en temps réel.
+        Les véhicules sont classés selon leur état (en ligne, hors service, inconnu, haut-le-pied)
+        et sont mis à jour automatiquement toutes les minutes grâce à l'API data.explore de la star. Réalisée au S1 du M2. 
+    </p>
+    </div>
+
+    <div id="container">
+        <div id="map"></div>
+    </div>
+
+    <script src="libraries/leaflet.js"></script>
+
+    <script>
+        var map = L.map("map").setView([48.1113, -1.6557], 13);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            name: "CartoDB.Positron",
+            attribution: 'Tiles <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a>',
+            maxZoom: 19
+        }).addTo(map);
+
+        var layers = {
+            "En ligne": L.layerGroup(),
+            "Hors-service": L.layerGroup(),
+            "Inconnu": L.layerGroup(),
+            "Haut-le-pied": L.layerGroup()
+        };
+
+        for (var l in layers) {
+            layers[l].addTo(map);
+        }
+
+        L.control.layers(null, layers).addTo(map);
+
+        var colorByState = { "En ligne": "green", "Hors-service": "red", "Inconnu": "grey", "Haut-le-pied": "orange" };
+        var sizeByState = { "En ligne": 5, "Hors-service": 3, "Inconnu": 3, "Haut-le-pied": 4 };
+
+        function changeMarkerType(point, latlng) {
+            var style = {
+                color: colorByState[point.properties.etat],
+                radius: sizeByState[point.properties.etat],
+                fillOpacity: 0.5,
+                weight: 2
+            };
+
+            var marker = L.circleMarker(latlng, style);
+
+            if (point.properties) {
+                const { nomcourtligne, destination, etat } = point.properties;
+                const popupContent = `
+                    <b>Ligne :</b> ${nomcourtligne}<br>
+                    <b>Destination :</b> ${destination}<br>
+                    <b>État :</b> ${etat}
+                `;
+
+                marker.on('mouseover', function () {
+                    marker.bindPopup(popupContent).openPopup();
+                });
+
+                marker.on('mouseout', function () {
+                    marker.closePopup();
+                });
+            }
+
+            return marker;
+        }
+
+        function downloadAndDisplayBuses() {
+            console.log("Mise à jour des bus en temps réel...");
+
+            fetch('https://data.explore.star.fr/api/records/1.0/search/?dataset=tco-bus-vehicules-position-tr&facet=numerobus&facet=etat&facet=nomcourtligne&facet=sens&facet=destination&facet=ecartsecondes&format=geojson&rows=500')
+            .then(res => res.json())
+            .then(function(busData) {
+                console.log("Données des bus :", busData);
+
+                Object.values(layers).forEach(element => { element.clearLayers(); });
+
+                busData.features.forEach(feature => {
+                    var singleBusLayer = L.geoJSON(feature, { pointToLayer: changeMarkerType });
+                    if (feature.properties && feature.properties.etat && layers[feature.properties.etat]) {
+                        layers[feature.properties.etat].addLayer(singleBusLayer);
+                    } else {
+                        console.warn("Données manquantes pour l'état du bus :", feature);
+                    }
+                });
+            })
+            .catch(error => console.error("Erreur lors du chargement des bus :", error));
+        }
+
+        downloadAndDisplayBuses();
+        setInterval(downloadAndDisplayBuses, 60 * 1000);
+    </script>
+</body>
+</html>
